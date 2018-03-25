@@ -1,0 +1,24 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\margl1440\margr1440\vieww13900\viewh11800\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 My article is called \'93Software Complexity: How Do We Bring Order to Chaos?\'94\
+\
+Here is the link: {\field{\*\fldinst{HYPERLINK "http://www.informit.com/articles/article.aspx?p=726130&seqNum=7"}}{\fldrslt http://www.informit.com/articles/article.aspx?p=726130&seqNum=7}}\
+\
+The article focuses on software complexity. Specifically, it talks about the inherent nature of software complexity, the common attributes of a complex software system, and ways to minimize the chaos when developing a complex software system. \
+\
+The first point of this article is that software is inherently complex. They make the same point as Brooks in his paper \'93No Silver Bullets\'94 that complexity is \'93an essential problem, not an accidental one\'94. The first question that is answered is the reason of why software is inherently complex. The author explains that much of this comes from the problem domain. Sometimes, software developers are given a myriad of competing and even contradicting requirements. Often times, people don\'92t know what they want, and the \'93communication gap\'94 between users and developers makes it difficult to even grasp an idea of what the raw functionality of a software system should be. Also, as development continues, a software system often changes because the very existence of the project alters the product. Using an early version of the system oftentimes forces users to better understand the real needs and redefine the problem statement.\
+\
+There is also the fact that there are fundamental limiting factors of human cognition. Software is complex because one person is unable to understand the entire system from front to back, it is just far too much information. This can be solved by decomposition and abstraction. \
+\
+In this article, there are five common attributes the authors believe can be found in all complex systems. The authors note that complexity often takes the form of a hierarchy. It is stated that the ultimate goal of the development team is to create the illusion of simplicity. There are also relative primitives that are completely arbitrary and can be seen as a much higher level abstraction to someone else. There is also a separation of concern. A system may have intra or inter connecting components, but it should be possible to study each concern in isolation. There are also common patterns, where certain subsystems are reused. Lastly, all complex software systems evolve from a stable intermediate form made during development. \
+\
+This article relates to the topics of Software Architecture, Software Design, as well as the \'93No Silver Bullets\'94 article by Brooks. Brooks makes the argument that complexity is an essence of software development, and this article greatly expands on that notion. Brooks makes the point that with complexity comes a non-linear increase with size. If you want to scale a software, it will become much more complex. This article also notes that this inherent complexity only increases the arbitrary or \'93accidental\'94 complexity Brooks talks about. With greater complexity comes greater problems with use ability, cost, performance, reliability, and managing the development process. The main claim is that the best way to minimize complexity is through good design and architecture. Making a hierarchal system and having a good design/architecture (OO is suggested in this article) is necessary. \
+\
+I\'92ve gained a lot of insight on software engineering from this class. This class and article has taught me that no matter what system I am working on, there are certain problems that will always happen simply because I\'92m working on software. It has taught me to separate the \'93essence\'94 and the \'93accidents\'94, and to be a better developer, I need to focus on better understanding the essence. It has taught me that good development habits are essential to creating a good system, and that solid design and architecture are only the beginning. \
+\
+}

@@ -1,0 +1,17 @@
+begin: start
+
+state: start
+callConstructor -> ready
+
+state: ready
+callAddText -> Add_Text
+callIndex -> ready
+callListPairs -> ready
+callReset -> ready
+
+state: Add_Text
+callAddText -> Add_Text
+callIndex -> ready
+callListPairs -> ready
+callReset -> ready
+

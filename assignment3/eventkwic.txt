@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AndaleMono;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c0\c0\c0;\csgenericrgb\c100000\c100000\c100000;}
+\margl1440\margr1440\vieww25400\viewh13220\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 In this document, I will be explaining the ins and outs of my finite state machine I made for my kwic implementation. I will be going through each phase, state, and transition of the machine and explaining what each does.\
+\
+The finite state machine I made for my kwic object class implementation does a variety of things in order to ensure that kwic is doing the correct thing. The first instruction in my finite state machine is the begin line. This is the instruction that specifies what state the machine should begin in. In this scenario, the machine is told to begin at the start state. \
+\
+Then, we have the starting state. There is two main purposes for this state. The first being to serve as a placement state for making sure that an object is created before any other events have been called. The second purpose is to kick off the rest of the machine by having the event call constructor transition the machine into the ready state. The call constructor event is called when a kwic object is first initialized. This is the only time that the constructor event is executed for the object, as the constructor event won\'92t be called again for an object that is already created. After the object is created, it will move to the ready state and will never return to the start state again. This is because it is unnecessary for an object to come back to this state once it has been created.\
+	\
+The next state in my finite state machine is the ready state. This state is first entered directly after the object has been initialized. During this state, any of the method calls for kwic can be used. If the method to add text is called, then there is a transition and it goes to the adding state. If any of index, list pairs, or reset are called, then the finite state machine goes back to the ready state and stays there until the add text event occurs. The reason for this is because the events index and list pairs only return information, and are not really a big transition. Also, reset does not do anything other than clear the object\'92s words value. It simply replaces the kwic objects words with an empty string, so it is not a huge transition.  \
+\
+The other state is the add text state. This occurs when the text is added to the object and the addText event is called. If text continues to be added, then it will continue to stay in this state. If any other method is called, it will return to the ready state. \
+\
+Here is an example trace of the machine:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf2 \cb3 \CocoaLigature0 \
+STEP #0: callConstructor --> ready\
+STEP #1: callAddText --> Add_Text\
+STEP #2: callListPairs --> ready\
+STEP #3: callIndex --> ready\
+STEP #4: callReset --> ready\
+STEP #5: callAddText --> Add_Text\
+STEP #6: callIndex --> ready\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 \CocoaLigature1 \
+In step 0, the object is initiated. Then, there is text added to the object, and the state transitions to Add_Text. After that, index and List pairs are called. Once the Index event is called, the machine goes back to the ready state. When the list pairs event occurs, the machine is still in the ready state. Then, the reset event occurs. The machine is still in the ready state, but the object\'92s words have been replaced with an empty string. Since we reset, new words must be added and the add text event happens again. Index is then called afterwards and the machine is once again in the ready state. }

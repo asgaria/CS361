@@ -1,0 +1,18 @@
+1. There were a few factors which made me realize what I wanted to test first. The example test that was given in the specifications is what drove me to make sure I started simple. 
+So my very first test was simply returning an empty list, no matter what string was passed. Since the entire problem is dependent on the string that is passed to the kwic function,
+making sure that the function could properly return the original string was extremely important, so I made sure to test that. Many of the requirements and options have to do
+with a string that is broken up into multiple lines, then taking action on those lines. Since many of these optional actions are done line by line, I wanted to first make sure
+I had the ability to sort and create the tuples on a single line. I felt that being able to do everything on a single line would make for an easier time pivoting my code to 
+work for multiple lines. After creating the tuples of a single line, line breaks using the \n character seemed like the next logical option. It wasn't a difficult option
+that is taken as an argument by the function, and ended up only taking a single line of code. After breaking the lines and sorting with multiple lines, I decided to move onto the optional
+arguments. Ignore words was done first, followed by periods to break. I did ignore words first, as I realized periods to break would require me to change some code when it came to line splitting.
+I decided to save list pairs for last, as it seemed the most difficult and disruptive with the overall program. Had I done these tasks in another order, I don't think too much would have changed
+about the code as a whole. The only thing I could potentially see being different is the overall efficiency. 
+
+2. For this problem in particular, I actually think that test driven development is an appropriate option. The reason for this is because of the amount of options and
+specifications for this program. Most of the strengths of test driven development are in the fact that it makes you consider all the intricacies of a problem by implementing
+all requirements in an incremental fashion. There are many little things to consider in this project, so TDD would help in this respect. There are many cases in this program 
+where you have to acknowledge punctuation and capitalization. Also, with each option you add you must pivot your code in some way to make sure that everything is still
+working properly for the other tests. For instance, in my project I split list pairs up into 2 seperate tests. The first being the implementation of the list pairs option
+as a whole, and the second being how to deal with punctuation and capitalization in list pairs. The only weakness I can think of that would come with using TDD for this 
+project would be the tediousness of programming very simple concepts in an incremental manner. 
